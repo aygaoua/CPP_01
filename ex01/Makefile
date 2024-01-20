@@ -6,11 +6,11 @@
 #    By: azgaoua <azgaoua@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/19 19:39:03 by azgaoua           #+#    #+#              #
-#    Updated: 2024/01/19 20:26:47 by azgaoua          ###   ########.fr        #
+#    Updated: 2024/01/20 11:16:36 by azgaoua          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = run
+NAME = RUN_EX01
 
 OBJS = Zombie.o zombieHorde.o main.o
 
@@ -20,7 +20,7 @@ CXX = c++
 
 RM = rm -rf
 
-CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -fsanitize=address -g3
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
 all :  $(NAME)
 
