@@ -6,7 +6,7 @@
 /*   By: azgaoua <azgaoua@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 20:44:47 by azgaoua           #+#    #+#             */
-/*   Updated: 2024/01/19 21:28:28 by azgaoua          ###   ########.fr       */
+/*   Updated: 2024/01/20 11:43:22 by azgaoua          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,20 @@
 
 int main() {
     std::string s = "HI THIS IS BRAIN";
-    std::string str = s;
-    std::string *stri = &s;
+    std::string *stringPTR = &s;
+    std::string &stringREF = s;
+
+    /*--------------------------------ADDRESS-------------------------------*/
+
+    std::cout << "s address : " << &s << std::endl;
+    std::cout << "ptr address : " << stringPTR << std::endl;
+    std::cout << "ref address : " << &stringREF << std::endl;
+
+    /*---------------------------------VALUE--------------------------------*/
+
+    std::cout << "s value: " << s << std::endl;
+    std::cout << "ptr value: " << *stringPTR << std::endl;
+    std::cout << "ref value: " << stringREF << std::endl;
 
     return (0);
 }
