@@ -6,11 +6,11 @@
 #    By: azgaoua <azgaoua@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/19 18:23:45 by azgaoua           #+#    #+#              #
-#    Updated: 2024/01/20 11:16:02 by azgaoua          ###   ########.fr        #
+#    Updated: 2024/01/21 21:09:08 by azgaoua          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = RUN_EX00
+NAME = run_ex01
 
 OBJS = Zombie.o newZombie.o randomChump.o main.o
 

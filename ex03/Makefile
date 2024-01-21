@@ -6,11 +6,11 @@
 #    By: azgaoua <azgaoua@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/20 12:36:29 by azgaoua           #+#    #+#              #
-#    Updated: 2024/01/21 18:14:51 by azgaoua          ###   ########.fr        #
+#    Updated: 2024/01/21 21:08:16 by azgaoua          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = RUN_EX03
+NAME = run_ex03
 
 OBJS = HumanA.o HumanB.o Weapon.o main.o
 

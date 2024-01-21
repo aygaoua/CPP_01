@@ -6,11 +6,11 @@
 #    By: azgaoua <azgaoua@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/19 19:39:03 by azgaoua           #+#    #+#              #
-#    Updated: 2024/01/20 11:16:36 by azgaoua          ###   ########.fr        #
+#    Updated: 2024/01/21 21:08:55 by azgaoua          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = RUN_EX01
+NAME = run_ex01
 
 OBJS = Zombie.o zombieHorde.o main.o
 
