@@ -6,7 +6,7 @@
 #    By: azgaoua <azgaoua@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/20 12:36:29 by azgaoua           #+#    #+#              #
-#    Updated: 2024/01/20 18:25:51 by azgaoua          ###   ########.fr        #
+#    Updated: 2024/01/21 18:14:51 by azgaoua          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,7 @@ CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
 all :  $(NAME)
 
-%.o: %.cpp
+%.o: %.cpp HumanA.hpp HumanB.hpp Weapon.hpp
 	@$(CXX) $(CXXFLAGS) -c $< -o $@
 
 $(NAME) :  $(OBJS) $(FILES)
