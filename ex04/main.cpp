@@ -6,43 +6,53 @@
 /*   By: azgaoua <azgaoua@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/20 19:36:32 by azgaoua           #+#    #+#             */
-/*   Updated: 2024/01/20 20:46:12 by azgaoua          ###   ########.fr       */
+/*   Updated: 2024/01/21 18:04:26 by azgaoua          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-#include <string>
 #include <fstream>
-#include <sstream>
+#include <string>
 
 int main(int ac, char **av) {
-    std::ifstream file(av[3]);
-    if (file.is_open())
-    {
-        std::stringstream buffer;
-        buffer << file.rdbuf();
-        std::string fileContent = buffer.str();
+    std::fstream infile;
+    std::ofstream outfile;
+    std::string line;
+    std::string out_filename;
+	std::string searched_str;
+	std::string newstr;
+	size_t pos;
 
-
-        std::string S1 = av[1];
-        std::string S2 = av[2];
-
-        size_t i = fileContent.find(S1);
-        while (i) {
-            if (i != 0) {
-                fileContent.erase(i, S1.length());
-                fileContent.insert(i, S2);
-            }
-            i = fileContent.find(S1);
+    if (ac != 4) {
+        std::cout << "usage: ./RUN_EX04 [filename] [S1] [S2]" << std::endl;
+        return 1;
+    }
+	newstr = std::string(av[3]);
+	searched_str = std::string(av[2]);
+    infile.open(av[1]);
+    if (infile.is_open()) {
+        out_filename = std::string(av[1]) + ".replace";
+        outfile.open(out_filename);
+        while (std::getline(infile, line)) {
+            if (line.compare(searched_str) == 0)
+                outfile << newstr << std::endl;
+			else if (line.find(searched_str, 0) != std::string::npos) {
+				while (line.find(searched_str, 0) != std::string::npos) {
+					pos = line.find(searched_str, 0);
+					line.erase(line.find(searched_str), searched_str.length());
+					line.insert(pos, newstr);
+				}
+				outfile << line << std::endl;
+			}
+            else
+                outfile << line << std::endl;
         }
-        std::cout << fileContent << std::endl;
+        infile.close();
+        outfile.close();
     }
     else {
-        std::cout << "the file is not openable !!" << std::endl;
+        std::cout << "Unable to open file " << av[1];
+        return 1;
     }
-    return (0);
+    return 0;
 }
-
-//find
-//erase
-//insert
