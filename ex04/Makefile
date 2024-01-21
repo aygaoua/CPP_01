@@ -6,11 +6,11 @@
 #    By: azgaoua <azgaoua@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/21 18:05:28 by azgaoua           #+#    #+#              #
-#    Updated: 2024/01/21 18:06:24 by azgaoua          ###   ########.fr        #
+#    Updated: 2024/01/21 21:07:57 by azgaoua          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = RUN_EX04
+NAME = run_ex04
 
 OBJS = main.o
 
