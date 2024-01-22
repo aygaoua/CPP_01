@@ -6,7 +6,7 @@
 /*   By: azgaoua <azgaoua@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 18:15:55 by azgaoua           #+#    #+#             */
-/*   Updated: 2024/01/19 19:19:20 by azgaoua          ###   ########.fr       */
+/*   Updated: 2024/01/22 11:49:13 by azgaoua          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,7 @@
 
 void randomChump( std::string name )
 {
-    Zombie z;
+    Zombie z(name);
 
-    z.set_name(name);
     z.announce();
 }

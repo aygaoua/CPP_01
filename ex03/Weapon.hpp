@@ -6,7 +6,7 @@
 /*   By: azgaoua <azgaoua@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/20 12:37:20 by azgaoua           #+#    #+#             */
-/*   Updated: 2024/01/20 18:00:59 by azgaoua          ###   ########.fr       */
+/*   Updated: 2024/01/22 14:11:58 by azgaoua          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,6 @@
 
 #ifndef WEAPON_HPP
 #define WEAPON_HPP
-
-
 
 class Weapon
 {

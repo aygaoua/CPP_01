@@ -6,7 +6,7 @@
 /*   By: azgaoua <azgaoua@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 17:43:47 by azgaoua           #+#    #+#             */
-/*   Updated: 2024/01/19 19:32:59 by azgaoua          ###   ########.fr       */
+/*   Updated: 2024/01/22 11:48:31 by azgaoua          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,14 +20,14 @@
 
 class Zombie {                                          /*Zombie.cpp file       */
     private:
-    std::string     name;
+        std::string     name;
 
     public:
-    Zombie();
-    ~Zombie();
-    void            announce( void );
-    void            set_name(std::string name);
-    std::string     get_name(void);
+        Zombie(std::string name);
+        ~Zombie();
+        void            announce( void );
+        void            set_name(std::string name);
+        std::string     get_name(void);
 };
 
 /*------------------------FUNCTIONS----------------------------*/

@@ -6,19 +6,18 @@
 /*   By: azgaoua <azgaoua@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 17:40:24 by azgaoua           #+#    #+#             */
-/*   Updated: 2024/01/19 19:48:27 by azgaoua          ###   ########.fr       */
+/*   Updated: 2024/01/22 11:55:10 by azgaoua          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
 int main() {
-    Zombie z;
+    Zombie *z;
 
-    z = newZombie("v")[0];
+    z = newZombie("v");
+    z->announce();
     randomChump("viva khawa");
-    z.announce();
-    // z.set_name("pobri");
-    std::cout << z.get_name() << std::endl;
+    delete z;
     return (0);
 }
