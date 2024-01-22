@@ -6,7 +6,7 @@
 /*   By: azgaoua <azgaoua@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/20 12:37:20 by azgaoua           #+#    #+#             */
-/*   Updated: 2024/01/22 14:11:58 by azgaoua          ###   ########.fr       */
+/*   Updated: 2024/01/22 20:21:20 by azgaoua          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ class Weapon
 {
     private:
         std::string type;
+
     public:
         Weapon(std::string name);
         std::string const &getType();
