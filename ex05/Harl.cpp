@@ -6,7 +6,7 @@
 /*   By: azgaoua <azgaoua@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/21 18:12:54 by azgaoua           #+#    #+#             */
-/*   Updated: 2024/01/21 19:58:05 by azgaoua          ###   ########.fr       */
+/*   Updated: 2024/01/23 17:23:53 by azgaoua          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,12 @@ void Harl::error( void ) {
 
 void Harl::complain(std::string level) {
     std::string levels[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
+    if (level.empty()) {
+        std::cout << "Wrong level !!" << std::endl;
+        return;
+    }
+    //pointer to private member function
+    void (Harl::*harlptr[4])(void) = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
     int i = 0;
     while (1) {
         for (i = 0; i < 4; i++) {
@@ -47,16 +53,16 @@ void Harl::complain(std::string level) {
         }
         switch (i) {
             case 0:
-                this->debug();
+                (this->*harlptr[0])();
                 break;
             case 1:
-                this->info();
+                (this->*harlptr[1])();
                 break;
             case 2:
-                this->warning();
+                (this->*harlptr[2])();
                 break;
             case 3:
-                this->error();
+                (this->*harlptr[3])();
                 break;
             default:
                 std::cout << "Wrong level" << std::endl;

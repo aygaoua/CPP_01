@@ -6,7 +6,7 @@
 /*   By: azgaoua <azgaoua@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/20 19:36:32 by azgaoua           #+#    #+#             */
-/*   Updated: 2024/01/22 19:15:01 by azgaoua          ###   ########.fr       */
+/*   Updated: 2024/01/23 19:34:19 by azgaoua          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,16 +21,17 @@ int ft_replace(char **av) {
     std::string out_filename;
 	std::string searched_str;
 	std::string newstr;
-	size_t pos = 0;
+	size_t pos;
 
-    newstr = av[3];
-	searched_str = av[2];
-    infile.open(av[1]);
+    pos = 0;
+    newstr = std::string(av[3]);
+	searched_str = std::string(av[2]);
+    infile.open(std::string(av[1]));
     if (infile.is_open()) {
         out_filename = std::string(av[1]) + ".replace";
         outfile.open(out_filename);
         if (!outfile.is_open()) {
-            std::cout << "Unable to open file " << out_filename;
+            std::cout << "Unable to open file " << out_filename << std::endl;
             infile.close();
             return (1);
         }
@@ -54,7 +55,7 @@ int ft_replace(char **av) {
         outfile.close();
     }
     else
-        std::cout << "Unable to open file " << av[1];
+        std::cout << "Unable to open file " << av[1] << std::endl;
     return (0);
 }
 
@@ -66,3 +67,5 @@ int main(int ac, char **av) {
 	ft_replace(av);
     return 0;
 }
+
+// check stream, if .good()
